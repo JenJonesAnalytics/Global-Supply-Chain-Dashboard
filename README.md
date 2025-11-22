@@ -39,6 +39,7 @@ This project demonstrates proficiency in data preparation and visualization deli
 
 * **Live Dashboard:** [View Published Dashboard](https://public.tableau.com/app/profile/jen.jones8389/viz/Global_Supply_Chain_Dashboard/Dashboard1)*
 * **Visual Snapshot:** ![Final Dashboard View](dashboard_final.png)
+* **Data Cleaning Report:** [View Data Preparation Report](Global_Supply_Chain_Data_Preparation.html)
 ## ⏭️ Future Enhancements
 
 Future iterations, if migrated to a full Tableau Desktop environment, would include:
