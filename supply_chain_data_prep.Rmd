@@ -1,0 +1,91 @@
+---
+title: "Global Supply Chain Data Preparation"
+author: "Jen Jones"
+date: "`r Sys.Date()`"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+# Load all required packages for this analysis
+library(tidyverse)
+library(lubridate) # Ensure mdy_hm() is explicitly available
+```
+```{r load-data}
+# Load the raw 180k+ row dataset from DataCo
+# This file is large and may take 1-3 minutes to load.
+df_raw <- read_csv("DataCoSupplyChainDataset.csv")
+```
+
+```
+{r inspect-date-format}
+# We need to see what our dates *look like*
+# to choose the correct parsing function.
+head(df_raw$`order date (DateOrders)`)
+```
+
+```{r fix-broken-column-names}
+# A bug in the raw data (a blank "" column name)
+# crashes dplyr and glimpse. This chunk finds
+# that blank name and replaces it.
+
+all_names <- colnames(df_raw)
+blank_name_index <- which(all_names == "")
+
+if (length(blank_name_index) > 0) {
+  all_names[blank_name_index] <- "Corrupted_Column_To_Remove"
+  colnames(df_raw) <- all_names
+  print("Corrupted column name(s) have been fixed.")
+}
+```
+```{r clean-and-engineer-data}
+# This is the main data engineering step.
+# We will select, rename, and engineer new columns.
+
+df_clean <- df_raw %>%
+  # Select key columns for dashboard analysis
+  select(
+    "Order Id", "order date (DateOrders)", "shipping date (DateOrders)",
+    "Days for shipping (real)", "Days for shipment (scheduled)",
+    "Delivery Status", "Late_delivery_risk", "Shipping Mode",
+    "Sales", "Order Item Total", "Order Item Profit Ratio",
+    "Order Profit Per Order", "Benefit per order", "Order Item Discount",
+    "Customer Id", "Customer Segment", "Customer City", "Customer State",
+    "Customer Country", "Market", "Order Region", "Order City",
+    "Order State", "Order Country", "Latitude", "Longitude",
+    "Category Name", "Department Name", "Product Name"
+  ) %>%
+  
+  # Rename columns for clarity and Tableau compatibility
+  rename(
+    order_date = "order date (DateOrders)",
+    shipping_date = "shipping date (DateOrders)",
+    shipping_days_real = "Days for shipping (real)",
+    shipping_days_scheduled = "Days for shipment (scheduled)"
+  ) %>%
+  
+  # Engineer new features
+  mutate(
+    # Create a binary flag for late shipments
+    is_late = if_else(shipping_days_real > shipping_days_scheduled, 1, 0),
+    
+    # Convert date strings to date objects for Tableau
+    # This requires the {lubridate} package, which is part of tidyverse
+    order_date = mdy_hm(order_date),
+    shipping_date = mdy_hm(shipping_date)
+  )
+
+print("Data engineering complete. df_clean created.")
+```
+
+```{r glimpse-clean}
+# Glimpse the final, clean data structure
+glimpse(df_clean)
+```
+
+```{r save-data-for-tableau}
+# Save the clean data frame as a new CSV for Tableau import
+write_csv(df_clean, "supply_chain_data_clean.csv")
+
+print("supply_chain_data_clean.csv saved successfully.")
+```
