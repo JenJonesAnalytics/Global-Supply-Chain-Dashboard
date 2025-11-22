@@ -37,7 +37,7 @@ This project demonstrates proficiency in data preparation and visualization deli
 
 ## 🔗 Project Links
 
-* **Live Dashboard:** **[Insert Link to your Tableau Public Dashboard Here]**
+* **Live Dashboard:** [View Published Dashboard](https://public.tableau.com/app/profile/jen.jones8389/viz/Global_Supply_Chain_Dashboard/Dashboard1)*
 * **Visual Snapshot:** ![Final Dashboard View](dashboard_final.png)
 ## ⏭️ Future Enhancements
 
