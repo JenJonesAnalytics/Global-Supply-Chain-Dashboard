@@ -38,8 +38,7 @@ This project demonstrates proficiency in data preparation and visualization deli
 ## 🔗 Project Links
 
 * **Live Dashboard:** **[Insert Link to your Tableau Public Dashboard Here]**
-* **Visual Snapshot:** **[Insert a screenshot of your final dashboard here for quick viewing]**
-
+* **Visual Snapshot:** ![Final Dashboard View](dashboard_final.png)
 ## ⏭️ Future Enhancements
 
 Future iterations, if migrated to a full Tableau Desktop environment, would include:
