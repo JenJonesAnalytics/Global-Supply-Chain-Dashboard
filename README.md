@@ -38,7 +38,7 @@ This project demonstrates proficiency in data preparation and visualization deli
 ### Data Asset Summary
 **Data Source:** This project utilizes a **publicly available Global Superstore transactional dataset from Kaggle**.
 
-**Data Preparation:** The raw data was imported into **R Studio** for preliminary inspection. This process included **handling a corrupted column name** and **engineering new features** (e.g., late shipment flag) before visualization.All project assets are available in the repository for full reproducibility:
+**Data Preparation:** The raw data was imported into **R Studio** for preliminary inspection. This process included **handling a corrupted column name** and **engineering new features** (e.g., late shipment flag) before visualization. All project assets are available in the repository for full reproducibility:
 * **Data Code:** The full data preparation pipeline is available in the `supply_chain_data_sample_data.R` and `supply_chain_data_prep.Rmd` files.
 * **Data Sample:** A small, 1,000-row sample of the final clean data is included in the `supply_chain_sample_data.csv` file to comply with GitHub file size limits.
 
