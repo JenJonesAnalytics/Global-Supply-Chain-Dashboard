@@ -44,7 +44,7 @@ All project assets are available in the repository for full reproducibility:
 
 * **Visual Snapshot:** ![Final Dashboard View](dashboard_final.png)
 * **Live Dashboard:** [View Published Dashboard](https://public.tableau.com/app/profile/jen.jones8389/viz/Global_Supply_Chain_Dashboard/Dashboard1)
-* **Data Cleaning Report:** [View Data Preparation Report](Global_Supply_Chain_Data_Preparation.html)
+* **Data Cleaning Report:** [View Data Preparation Report](supply_chain_data_prep.html)
 
 ## ⏭️ Future Enhancements
 
