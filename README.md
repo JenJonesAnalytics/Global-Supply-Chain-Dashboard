@@ -35,11 +35,17 @@ This project demonstrates proficiency in data preparation and visualization deli
 * **Solution:** The filter function was validated by **permanently applying a filter at the worksheet level** (e.g., filtering for 'T-Shirts') and confirming that the **entire dashboard updated accurately across all five sheets**.
 * **Result:** This process confirmed data connection integrity and the report's technical readiness for full implementation in a more stable environment.
 
-## 🔗 Project Links
+### Data Asset Summary
+All project assets are available in the repository for full reproducibility:
+* **Data Code:** The full data preparation pipeline is available in the `supply_chain_data_sample.R` and `supply_chain_data_prep.Rmd` files.
+* **Data Sample:** A small, 1,000-row sample of the final clean data is included in the `supply_chain_sample_data.csv` file to comply with GitHub file size limits.
 
-* **Live Dashboard:** [View Published Dashboard](https://public.tableau.com/app/profile/jen.jones8389/viz/Global_Supply_Chain_Dashboard/Dashboard1)*
+* ## 🔗 Project Links
+
 * **Visual Snapshot:** ![Final Dashboard View](dashboard_final.png)
+* * **Live Dashboard:** [View Published Dashboard](https://public.tableau.com/app/profile/jen.jones8389/viz/Global_Supply_Chain_Dashboard/Dashboard1)*
 * **Data Cleaning Report:** [View Data Preparation Report](Global_Supply_Chain_Data_Preparation.html)
+
 ## ⏭️ Future Enhancements
 
 Future iterations, if migrated to a full Tableau Desktop environment, would include:
