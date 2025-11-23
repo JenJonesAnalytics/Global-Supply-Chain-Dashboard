@@ -42,7 +42,7 @@ This project demonstrates proficiency in data preparation and visualization deli
 * **Data Code:** The full data preparation pipeline is available in the `supply_chain_data_sample_data.R` and `supply_chain_data_prep.Rmd` files.
 * **Data Sample:** A small, 1,000-row sample of the final clean data is included in the `supply_chain_sample_data.csv` file to comply with GitHub file size limits.
 
-* ## 🔗 Project Links
+## 🔗 Project Links
 
 * **Visual Snapshot:** ![Final Dashboard View](dashboard_final.png)
 * **Live Dashboard:** [View Published Dashboard](https://public.tableau.com/app/profile/jen.jones8389/viz/Global_Supply_Chain_Dashboard/Dashboard1)
@@ -50,6 +50,5 @@ This project demonstrates proficiency in data preparation and visualization deli
 
 ## ⏭️ Future Enhancements
 
-Future iterations, if migrated to a full Tableau Desktop environment, would include:
 1.  **Full Interactivity:** Implementing the intended `Category Name` filter and a dynamic `Date Range` parameter.
 2.  **Drill-Down:** Creating a second page dedicated to the 2017 sales decline, mapping performance by `Region` and `Product Name` to isolate the cause.
